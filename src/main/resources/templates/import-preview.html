@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Import Preview</title>
+</head>
+<body>
+    <h1>Import Preview</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Area</th>
+        </tr>
+        <tr th:each="space : ${spaces}">
+            <td th:text="${space.name}"></td>
+            <td th:text="${space.type}"></td>
+            <td th:text="${space.area}"></td>
+        </tr>
+    </table>
+    <form method="post" action="/confirm-import">
+        <button type="submit">Confirm Import</button>
+    </form>
+    <a href="/upload">Back</a>
+</body>
+</html>
