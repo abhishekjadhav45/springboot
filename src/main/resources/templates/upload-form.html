@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Upload Floor Plan</title>
+</head>
+<body>
+    <h1>Upload Floor Plan</h1>
+    <form method="post" enctype="multipart/form-data" action="/upload-plan">
+        <input type="file" name="file" accept="image/*,.pdf" required>
+        <button type="submit">Upload</button>
+    </form>
+    <br>
+    <h2>Import Spaces</h2>
+    <form method="post" enctype="multipart/form-data" action="/import-spaces">
+        <input type="file" name="file" accept=".csv,.xlsx" required>
+        <button type="submit">Import</button>
+    </form>
+    <div th:if="${error}" style="color:red;">
+        <p th:text="${error}"></p>
+    </div>
+</body>
+</html>
