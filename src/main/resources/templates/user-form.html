@@ -55,6 +55,7 @@
 </head>
 <body>
     <h1>User Registration</h1>
+    <p><a href="/upload">Upload Floor Plan</a> | <a href="/hierarchy">View Hierarchy</a></p>
     <form action="#" th:action="@{/user}" th:object="${user}" method="post">
         <label for="userId">User ID:</label>
         <input type="text" th:field="*{userId}" id="userId" required>
