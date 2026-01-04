@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Upload Result</title>
+</head>
+<body>
+    <h1>Upload Successful</h1>
+    <p>File uploaded to: <a th:href="${url}" th:text="${url}"></a></p>
+    <a href="/upload">Upload another</a>
+</body>
+</html>
