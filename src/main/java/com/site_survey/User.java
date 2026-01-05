@@ -6,11 +6,10 @@ public class User {
     private String email;
     private String contactNumber;
 
-    // Default constructor
+    
     public User() {
     }
 
-    // Constructor with all fields
     public User(String userId, String password, String email, String contactNumber) {
         this.userId = userId;
         this.password = password;
@@ -18,7 +17,7 @@ public class User {
         this.contactNumber = contactNumber;
     }
 
-    // Getters and Setters
+   
     public String getUserId() {
         return userId;
     }
